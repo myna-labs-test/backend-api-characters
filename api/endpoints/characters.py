@@ -37,4 +37,4 @@ async def get_generated_tts(
     session: AsyncSession = Depends(get_session)
 ) -> CharacterTTSOut:
     generated_tts = await generate_tts(character_tts, session)
-    return CharacterTTSOut(text=generated_tts)
+    return CharacterTTSOut(output=generated_tts)
