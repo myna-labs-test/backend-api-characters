@@ -8,8 +8,14 @@ class BaseDialogDriver(ABC):
     model_id: str
 
     @classmethod
+    @abstractmethod
+    def with_default_settings(cls):
+        pass
+
+    @classmethod
     def from_character(cls, character: Characters):
-        return cls(model_id=character.model_id)
+        cls.model_id = character.model_id
+        return cls.with_default_settings()
 
     @classmethod
     @abstractmethod
