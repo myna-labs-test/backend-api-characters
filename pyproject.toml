@@ -25,6 +25,7 @@ gtts = "^2.3.1"
 flax = "^0.6.3"
 torch = {version = "^1.13.1", platform = "linux"}
 tensorflow = "^2.11.0"
+numpy = {version = "^1.24.1", platform = "linux"}
 
 
 [build-system]
