@@ -3,8 +3,9 @@ from pydantic import BaseModel, Field
 
 
 class Character(BaseModel):
-    id: UUID = Field(..., description='Character UUID')
-    name: str = Field(..., description='Character name')
+    text_driver: str = Field(..., description='Character text driver')
+    tts_driver: str = Field(..., description='Character tts driver')
+    model_id: str = Field(..., description='Character model id')
 
     class Config:
         orm_mode: bool = True

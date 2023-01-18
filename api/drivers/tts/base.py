@@ -1,6 +1,5 @@
 from dataclasses import dataclass
 from abc import ABC, abstractmethod
-from migrations.database.models import Characters
 
 
 @dataclass
